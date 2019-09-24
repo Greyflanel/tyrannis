@@ -1,5 +1,5 @@
 import React from "react";
-import Jinxy from './Jinxy'
+import Jinxy from './Jinxy';
 
 class App extends React.Component {
     
@@ -7,9 +7,11 @@ state = {
     colors: ['red', 'green', 'blue']
 };
 
+
 componentDidMount() {
   this.setState  ({
-  colors: [...this.state.colors, "yellow", "purple", "orange"]
+  colors: [...this.state.colors, "yellow", "purple", "orange"],
+  jinxes: [ ...this.state.colors, "indigo", "magenta" ]
 });
 }
   render() {
@@ -18,7 +20,7 @@ componentDidMount() {
     return (
       <div className="container">
     <div className="color">
-    <Jinxy colors={this.state.colors.filter(color => 
+    <Jinxy jinxes={this.state.jinxes} colors={this.state.colors.filter(color => 
       color !== "red"
     ).join(' ')}/>
     </div>
@@ -26,4 +28,6 @@ componentDidMount() {
      )};
     };
 
+
+    
 export default App;

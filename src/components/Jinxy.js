@@ -5,6 +5,7 @@ const Jinxy = props => {
     <div>
         JINXY
 <p>{props.colors}</p>
+<p>{props.jinxes}</p>
     </div>
     );
 };
