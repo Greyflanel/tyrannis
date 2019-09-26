@@ -21,7 +21,7 @@ componentDidMount() {
       <div className="container">
     <div className="color">
     <Jinxy jinxes={this.state.jinxes} colors={this.state.colors.filter(color => 
-      color !== "red"
+      color !== "purple"
     ).join(' ')}/>
     </div>
     </div>
